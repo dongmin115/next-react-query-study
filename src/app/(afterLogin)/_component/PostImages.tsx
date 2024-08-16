@@ -2,19 +2,10 @@ import Link from "next/link";
 import style from "@/app/(afterLogin)/_component/post.module.css";
 import {ReactNode} from "react";
 import cx from "classnames";
+import {Post} from "@/model/Post";
 
 type Props = {
-    post: {
-        postId: number;
-        content: string;
-        User: {
-            id: string;
-            nickname: string;
-            image: string;
-        },
-        createdAt: Date,
-        Images: any[],
-    }
+    post: Post;
 }
 
 export default function PostImages ({post}: Props) {
